@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mainPage.css">
+    <link rel="stylesheet" href="light-theme.css" id="theme-link">
+    <link rel="stylesheet" href="adaptive.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>The weather</title>
+</head>
+
+<body>
+    <div class="wrapper container">
+        <header class="wrapper_header">
+            <div class="page_settings">
+                <button class="button_refreshImage" id="buttonTheme">
+                    <i class="fas fa-sync-alt icon_refresh"></i>
+                </button>
+                <button class="button_theme"><img src="images/moon.png" class="moon_image" alt="theme-img"></button>
+                <button class="favorites_button"><img src="images/heart.png" alt="" class="favorites_img"></button>
+            </div>
+            <div class="page_search">
+                <input type="text" value="Search city" class="input_search"
+                    onfocus="if (this.value == 'Search city') {this.value = '';}"
+                    onblur="if (this.value == '') {this.value = 'Search city';}">
+                <button class="button_search">SEARCH</button>
+            </div>
+        </header>
+        <main class="wrapper_basic">
+            <div class="weather_block loading">
+                <div class="weather_block__title">
+                    <div class="">
+                        <p class="title_city"></p>
+                        <span class="title_country"></span>
+                        <div>
+                            <span class="title_date"></span>
+                        </div>
+                    </div>
+                    <button class="addFavorit_button"><img src="images/heartAdd.png" alt="" class="favoritesAdd_img"
+                            id="favoritesAddimg">
+                    </button>
+                </div>
+                <div class="weather_block__today">
+                    <p class="weather_block__today_degree"></p>
+                    <div>
+                        <div class="weather_block__today_description">
+                            <div>
+                                <div class="forecast">
+                                    <p class="weather_block__today_forecast"></p>
+                                    <img src="../Weather/images/cloud.svg" alt="weather"
+                                        class="weather_block__today_image">
+                                </div>
+                                <p class="weather_block__today_fells"></p>
+                            </div>
+                            <div class="forecast__windHumidity">
+                                <p class="forecast_wind">Wind: <span class="weather_block__today_wind"></span>m/s</p>
+                                <p class="forecast_humidity">Humidity: <span
+                                        class="weather_block__today_humidity"></span> %</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather_block_nextDays">
+                    <div class="weather_block_nextDays_first">
+                        <p class="weather_block_nextDays_title">Tuesday</p>
+                        <div class="nextDays_degreeAndImage">
+                            <p class="weather_block_nextDays_degree">7°</p>
+                            <img src="images/sun.svg" alt="image">
+                        </div>
+                    </div>
+                    <div class="weather_block_nextDays_second">
+                        <p class="weather_block_nextDays_title">Wednesday</p>
+                        <div class="nextDays_degreeAndImage">
+                            <p class="weather_block_nextDays_degree">6°</p>
+                            <img src="images/cloudSmall.svg" alt="image">
+                        </div>
+                    </div>
+                    <div class="weather_block_nextDays_third">
+                        <p class="weather_block_nextDays_title">Thursday</p>
+                        <div class="nextDays_degreeAndImage">
+                            <p class="weather_block_nextDays_degree">3°</p>
+                            <img src="images/cloudSmall.svg" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="favorites_block" id="favoritesBlock">
+
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

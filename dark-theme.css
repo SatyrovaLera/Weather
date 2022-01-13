@@ -1,0 +1,25 @@
+body{
+  background: var(--bg-color), url(../Weather/images/darkBg.jpg);
+  background-size: cover;
+  background-attachment: fixed;    
+}
+
+*{
+  color: var(--black-color);
+}
+
+button{
+  background: var(--bg-button-dark);
+}
+
+.favorites_block__item{
+  background-color: var(--bg-favorites-item-dark);
+}
+
+.favorites_block::-webkit-scrollbar {
+  background-color: var(--bg-button-dark);
+}
+
+.favorites_block::-webkit-scrollbar-thumb {
+  background-color: var( --bg-favorites-item-dark);
+}
